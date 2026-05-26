@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://netsci-dresden.de/sitemap-index.xml

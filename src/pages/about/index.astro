@@ -1,0 +1,38 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Prose from '../../components/ui/Prose.tsx';
+---
+
+<PageLayout
+  title="About NetSci 2026"
+  eyebrow="The conference"
+  lede="The flagship annual meeting of the Network Science Society, hosted in 2026 by TU Dresden."
+  crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]}
+>
+  <Prose>
+    <p>
+      <strong>NetSci</strong> is the flagship gathering of the
+      <a href="https://netscisociety.net">Network Science Society</a>, uniting researchers and
+      practitioners who study complex systems through the lens of networks. For its 2026 edition,
+      the International School and Conference on Network Science comes to <strong>Dresden</strong>,
+      where TU Dresden welcomes the global community to its historic riverside campus.
+    </p>
+    <p>
+      The program fosters interdisciplinary exchange across computer science, physics, mathematics,
+      biology, neuroscience, and the social sciences — wherever networks help us understand the world.
+    </p>
+    <h2>What to expect</h2>
+    <ul>
+      <li>Keynote lectures from leaders across the field.</li>
+      <li>Contributed talks, lightning talks, and two poster sessions.</li>
+      <li>Community-organised satellite symposia framing the main program.</li>
+      <li>A school component for students new to network science.</li>
+    </ul>
+    <h2>Learn more</h2>
+    <ul>
+      <li><a href="/about/committee">Organising Committee</a></li>
+      <li><a href="/about/awards">Conference Awards</a></li>
+      <li><a href="/about/code-of-conduct">Code of Conduct</a></li>
+    </ul>
+  </Prose>
+</PageLayout>

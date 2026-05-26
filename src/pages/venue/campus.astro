@@ -1,0 +1,31 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Prose from '../../components/ui/Prose.tsx';
+---
+
+<PageLayout
+  title="TU Dresden Campus"
+  eyebrow="Venue & Travel"
+  lede="Main sessions are hosted in the Hörsaalzentrum, with the SLUB library nearby for posters."
+  crumbs={[{ label: 'Home', href: '/' }, { label: 'Venue & Travel', href: '/venue' }, { label: 'Campus' }]}
+>
+  <Prose>
+    <h2>Main buildings</h2>
+    <ul>
+      <li><strong>Hörsaalzentrum (HSZ)</strong>, Bergstraße 64 — keynotes and parallel sessions.</li>
+      <li><strong>Audimax / Hülsse-Bau</strong> — plenary keynotes.</li>
+      <li><strong>SLUB</strong> (Saxon State and University Library) — poster sessions and breaks.</li>
+    </ul>
+    <h2>Finding your way</h2>
+    <p>
+      The buildings are within short walking distance of each other. Signage and on-site volunteers
+      will help direct you. Registration and the info desk open in the HSZ foyer from Monday morning.
+    </p>
+    <h2>Accessibility</h2>
+    <p>
+      Session buildings are wheelchair accessible. If you have specific access requirements, let us
+      know at <a href="mailto:support@netsci-dresden.de">support@netsci-dresden.de</a> so we can
+      assist in advance.
+    </p>
+  </Prose>
+</PageLayout>

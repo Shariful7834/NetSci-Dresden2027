@@ -1,0 +1,76 @@
+// ─────────────────────────────────────────────
+//  Centralised UI strings (English only for now).
+//  Kept as a table so copy lives in one place and a
+//  second locale can be re-added later if needed.
+// ─────────────────────────────────────────────
+
+export const ui = {
+  en: {
+    'nav.about': 'About',
+    'nav.about.committee': 'Organising Committee',
+    'nav.about.awards': 'Conference Awards',
+    'nav.about.conduct': 'Code of Conduct',
+    'nav.calls': 'Calls',
+    'nav.program': 'Program',
+    'nav.program.speakers': 'Keynote Speakers',
+    'nav.program.schedule': 'Schedule',
+    'nav.program.satellites': 'Satellites',
+    'nav.program.posters': 'Posters',
+    'nav.program.social': 'Social Program',
+    'nav.registration': 'Registration',
+    'nav.venue': 'Venue & Travel',
+    'nav.venue.travel': 'Getting to Dresden',
+    'nav.venue.campus': 'TU Dresden Campus',
+    'nav.venue.hotels': 'Hotels & Accommodation',
+    'nav.partners': 'Partners',
+    'nav.practical': 'Practical Info',
+    'nav.home': 'NetSci Dresden — home',
+    'nav.menu.open': 'Open menu',
+
+    // Use `|` to mark line breaks (the Hero renders one <br/> per pipe).
+    'hero.title': 'International School and|Conference on Network|Science',
+    'hero.dates': 'June 15th to 19th 2026, Dresden, Germany',
+    'hero.cta': 'Registration open',
+
+    'about.label': 'Welcome to NetSci Dresden',
+    'about.heading': 'NetSci 2026 —',
+    'about.place': 'Dresden, Germany',
+    'about.body1.pre': 'NetSci is the flagship gathering of the',
+    'about.body1.link': 'Network Science Society',
+    'about.body1.post':
+      ', uniting researchers and practitioners who study complex systems through the lens of networks. For its 2026 edition, the conference comes to Dresden, where TU Dresden welcomes the global community to its historic riverside campus.',
+    'about.body2':
+      'The program fosters interdisciplinary exchange across computer science, physics, mathematics, biology, neuroscience, and the social sciences — wherever networks help us understand the world.',
+
+    'dates.label': 'Mark your calendar',
+    'dates.heading': 'Important dates',
+
+    'contrib.label': 'For Authors',
+    'contrib.heading': 'Preparing your contribution',
+    'contrib.sub': 'Format guidelines for the three presentation tracks at NetSci Dresden 2026.',
+    'contrib.print.label': 'Local printing',
+    'contrib.print.heading': 'Need to print on-site?',
+    'contrib.print.body':
+      "If you'd rather not travel with your poster, a partner shop near campus offers same-day A0 printing. Place your order at least 24 hours in advance. Closed on Sundays and German public holidays.",
+    'contrib.print.cta': 'Full instructions',
+
+    'discover.label': 'Discover Dresden',
+    'discover.heading': 'A city of baroque art and bold science.',
+    'discover.body':
+      "Saxony's capital pairs reconstructed baroque architecture with one of Europe's most ambitious research clusters. TU Dresden — a German University of Excellence — sits a short tram ride from the historic centre, the Elbe river, and the museums of the Zwinger.",
+    'discover.cta': 'Read the full travel guide',
+    'discover.caption': 'Welcome to Dresden — Florence on the Elbe',
+
+    'footer.partners': 'Hosted by · In partnership with',
+    'footer.tagline':
+      'The International School and Conference on Network Science, hosted at TU Dresden, 15 — 19 June 2026.',
+    'footer.follow': 'Follow',
+    'footer.col.conference': 'Conference',
+    'footer.col.practical': 'Practical',
+    'footer.col.contact': 'Contact',
+    'footer.rights': '© 2026 NetSci Dresden Organising Committee. All rights reserved.',
+  },
+} as const;
+
+export type Lang = keyof typeof ui;
+export const defaultLang: Lang = 'en';

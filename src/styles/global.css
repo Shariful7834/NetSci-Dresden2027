@@ -1,0 +1,129 @@
+/* Fonts loaded via <link rel="preconnect"/preload> in Layout.astro head — not @import (render-blocking). */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-tu-ink antialiased bg-tu-cream;
+    font-size: 1.1rem;
+    line-height: 1.65;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+    line-height: 1.15;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Scroll-reveal: elements with [data-reveal] fade up when scrolled into view.
+     Disabled entirely for users who prefer reduced motion. */
+  @media (prefers-reduced-motion: no-preference) {
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+    [data-reveal].is-revealed {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* ── Navbar dropdowns ─────────────────────────────────────────────
+   Reveal on hover, keyboard focus, or explicit toggle (aria-expanded). */
+@media (min-width: 1024px) {
+  .nav-item > .submenu {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+  .nav-item:hover > .submenu,
+  .nav-item:focus-within > .submenu,
+  .nav-item .dropdown-toggle[aria-expanded="true"] ~ .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1023px) {
+  .submenu { display: none; }
+  .dropdown-toggle[aria-expanded="true"] ~ .submenu { display: block; }
+}
+.dropdown-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-item > .submenu { transition: none; }
+}
+
+/* ── Prose (long-form content) ────────────────────────────────────── */
+.prose-content {
+  color: theme('colors.tu.ink');
+  line-height: 1.7;
+  max-width: 46rem;
+}
+.prose-content h2 {
+  font-family: theme('fontFamily.display');
+  font-weight: 700;
+  font-size: 1.875rem;
+  color: theme('colors.tu.deep');
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+.prose-content h3 {
+  font-family: theme('fontFamily.display');
+  font-weight: 600;
+  font-size: 1.375rem;
+  color: theme('colors.tu.deep');
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.prose-content p { margin-bottom: 1.1rem; }
+.prose-content a {
+  color: theme('colors.tu.navy');
+  text-decoration: underline;
+  text-decoration-color: theme('colors.tu.gold');
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+.prose-content a:hover { color: theme('colors.tu.ember'); }
+.prose-content ul,
+.prose-content ol { margin: 0 0 1.1rem 1.25rem; }
+.prose-content ul { list-style: disc; }
+.prose-content ol { list-style: decimal; }
+.prose-content li { margin-bottom: 0.4rem; }
+.prose-content strong { color: theme('colors.tu.deep'); font-weight: 600; }
+.prose-content blockquote {
+  border-left: 3px solid theme('colors.tu.gold');
+  padding-left: 1rem;
+  color: rgba(11, 23, 38, 0.75);
+  font-style: italic;
+  margin: 1.25rem 0;
+}
+.prose-content code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.9em;
+  background: theme('colors.tu.ice');
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+}
+.prose-content hr {
+  border: none;
+  border-top: 1px solid rgba(0, 48, 99, 0.12);
+  margin: 2rem 0;
+}

@@ -1,0 +1,31 @@
+---
+import { getImage } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/layout/Navbar.tsx';
+import Footer from '../components/layout/Footer.tsx';
+import Hero from '../components/sections/Hero.tsx';
+import About from '../components/sections/About.tsx';
+import ImportantDates from '../components/sections/ImportantDates.tsx';
+import Contributions from '../components/sections/Contributions.tsx';
+import DiscoverDresden from '../components/sections/DiscoverDresden.tsx';
+import dresdenSrc from '../assets/tu-dresden.jpeg';
+
+// Optimize images in Astro (AVIF + responsive widths), then hand the URLs to React.
+const heroImg = await getImage({ src: dresdenSrc, widths: [640, 1024, 1536, 1920], format: 'avif' });
+const discoverImg = await getImage({ src: dresdenSrc, widths: [480, 768, 1024], format: 'avif' });
+
+const hero = { src: heroImg.src, srcSet: heroImg.srcSet.attribute };
+const discover = { src: discoverImg.src, srcSet: discoverImg.srcSet.attribute };
+---
+
+<Layout title="NetSci Dresden 2026 — International Conference on Network Science">
+  <Navbar client:load />
+  <main>
+    <Hero image={hero} />
+    <About />
+    <ImportantDates />
+    <Contributions />
+    <DiscoverDresden image={discover} />
+  </main>
+  <Footer />
+</Layout>

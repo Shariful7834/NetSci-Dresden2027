@@ -1,0 +1,40 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ["Zilla Slab", "Georgia", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
+      colors: {
+        // TU Dresden inspired palette
+        tu: {
+          deep: "#001A33",
+          navy: "#003063",
+          blue: "#0F4D92",
+          sky: "#3A75C4",
+          ice: "#E8F1FB",
+          cream: "#F5F1EA",
+          gold: "#C9A24B",
+          ember: "#B5471B",
+          ink: "#0B1726",
+        },
+      },
+      boxShadow: {
+        soft: "0 10px 40px -10px rgba(0, 26, 51, 0.25)",
+        card: "0 2px 8px rgba(0, 26, 51, 0.06), 0 12px 28px -12px rgba(0, 26, 51, 0.18)",
+      },
+      animation: {
+        "fade-up": "fadeUp 0.8s ease-out forwards",
+      },
+      keyframes: {
+        fadeUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+    },
+  },
+  plugins: [],
+};

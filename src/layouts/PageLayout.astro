@@ -1,0 +1,33 @@
+---
+import Layout from './Layout.astro';
+import Navbar from '../components/layout/Navbar.tsx';
+import Footer from '../components/layout/Footer.tsx';
+import PageHero from '../components/ui/PageHero.tsx';
+
+interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  eyebrow?: string;
+  lede?: string;
+  crumbs?: Crumb[];
+}
+
+const { title, description, eyebrow, lede, crumbs = [] } = Astro.props;
+const fullTitle = `${title} — NetSci Dresden 2026`;
+---
+
+<Layout title={fullTitle} description={description ?? lede}>
+  <Navbar client:load />
+  <main>
+    <PageHero eyebrow={eyebrow} title={title} lede={lede} crumbs={crumbs} />
+    <div class="max-w-6xl mx-auto px-4 lg:px-8 py-16">
+      <slot />
+    </div>
+  </main>
+  <Footer />
+</Layout>
