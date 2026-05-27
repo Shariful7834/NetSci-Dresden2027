@@ -1,4 +1,4 @@
-import { partners, socials } from '../../data/partners';
+import { socials } from '../../data/partners';
 import { useTranslations } from '../../i18n/utils';
 import { landingOnly } from '../../data/site';
 
@@ -17,12 +17,17 @@ export default function Footer() {
           <div className="text-xs uppercase tracking-[0.25em] text-tu-gold font-semibold text-center mb-6">
             {t('footer.partners')}
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-white/60">
-            {partners.map((p) => (
-              <span key={p} className="font-display text-sm md:text-base tracking-wide hover:text-white transition-colors cursor-default">
-                {p}
-              </span>
-            ))}
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+            <img
+              src="/tu-dresden-logo.png"
+              alt="TU Dresden"
+              className="h-12 md:h-14 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+            />
+            <img
+              src="/synosys-logo.png"
+              alt="SynoSys"
+              className="h-12 md:h-14 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+            />
           </div>
         </div>
       </div>
@@ -31,19 +36,13 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 lg:px-8 py-12 grid md:grid-cols-[2fr_1fr_1fr_1fr] gap-8">
         {/* Brand block */}
         <div>
-          <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-full bg-tu-gold flex items-center justify-center">
-              <svg viewBox="0 0 44 44" className="w-6 h-6" fill="none">
-                <circle cx="22" cy="10" r="3" fill="#001A33" />
-                <circle cx="10" cy="28" r="3" fill="#001A33" />
-                <circle cx="34" cy="28" r="3" fill="#001A33" />
-                <path d="M22 10 L10 28 M22 10 L34 28 M10 28 L34 28" stroke="#001A33" strokeWidth="1.5" />
-              </svg>
+          <div className="flex items-center gap-3">
+            <div className="bg-white rounded-md px-3 py-2 inline-flex">
+              <img src="/netsci-logo.svg" alt="NetSci" className="h-8 w-auto" />
             </div>
-            <div className="leading-none">
-              <div className="font-display text-xl font-black">NetSci</div>
-              <div className="text-[10px] tracking-[0.18em] uppercase text-tu-gold mt-0.5">Dresden ★</div>
-            </div>
+            <span className="text-[10px] tracking-[0.18em] uppercase text-tu-gold font-semibold">
+              Dresden ★
+            </span>
           </div>
           <p className="mt-4 text-white/60 text-sm max-w-sm leading-relaxed">{t('footer.tagline')}</p>
 

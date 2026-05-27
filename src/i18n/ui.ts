@@ -29,16 +29,16 @@ export const ui = {
 
     // Use `|` to mark line breaks (the Hero renders one <br/> per pipe).
     'hero.title': 'International School and|Conference on Network|Science',
-    'hero.dates': 'June 15th to 19th 2026, Dresden, Germany',
+    'hero.dates': 'May 17 — 21, 2027, Dresden, Germany',
     'hero.cta': 'Registration open',
 
     'about.label': 'Welcome to NetSci Dresden',
-    'about.heading': 'NetSci 2026 —',
+    'about.heading': 'NetSci 2027 —',
     'about.place': 'Dresden, Germany',
     'about.body1.pre': 'NetSci is the flagship gathering of the',
     'about.body1.link': 'Network Science Society',
     'about.body1.post':
-      ', uniting researchers and practitioners who study complex systems through the lens of networks. For its 2026 edition, the conference comes to Dresden, where TU Dresden welcomes the global community to its historic riverside campus.',
+      ', uniting researchers and practitioners who study complex systems through the lens of networks. For its 2027 edition, the conference comes to Dresden, where TU Dresden welcomes the global community to its historic riverside campus.',
     'about.body2':
       'The program fosters interdisciplinary exchange across computer science, physics, mathematics, biology, neuroscience, and the social sciences — wherever networks help us understand the world.',
 
@@ -47,7 +47,7 @@ export const ui = {
 
     'contrib.label': 'For Authors',
     'contrib.heading': 'Preparing your contribution',
-    'contrib.sub': 'Format guidelines for the three presentation tracks at NetSci Dresden 2026.',
+    'contrib.sub': 'Format guidelines for the three presentation tracks at NetSci Dresden 2027.',
     'contrib.print.label': 'Local printing',
     'contrib.print.heading': 'Need to print on-site?',
     'contrib.print.body':
@@ -63,12 +63,12 @@ export const ui = {
 
     'footer.partners': 'Hosted by · In partnership with',
     'footer.tagline':
-      'The International School and Conference on Network Science, hosted at TU Dresden, 15 — 19 June 2026.',
+      'The International School and Conference on Network Science, hosted at TU Dresden, 17 — 21 May 2027.',
     'footer.follow': 'Follow',
     'footer.col.conference': 'Conference',
     'footer.col.practical': 'Practical',
     'footer.col.contact': 'Contact',
-    'footer.rights': '© 2026 NetSci Dresden Organising Committee. All rights reserved.',
+    'footer.rights': '© 2027 NetSci Dresden Organising Committee. All rights reserved.',
   },
 } as const;
 

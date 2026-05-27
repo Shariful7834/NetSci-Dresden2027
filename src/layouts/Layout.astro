@@ -12,7 +12,7 @@ interface Props {
 
 const {
   title,
-  description = 'NetSci Dresden 2026 — International Conference on Network Science at TU Dresden',
+  description = 'NetSci Dresden 2027 — International Conference on Network Science at TU Dresden',
   image = '/tu-dresden.jpeg',
 } = Astro.props;
 
@@ -22,10 +22,10 @@ const siteOrigin = (Astro.site ?? new URL('https://netsci-dresden.de')).origin;
 const eventSchema = {
   '@context': 'https://schema.org',
   '@type': 'Event',
-  name: 'NetSci Dresden 2026 — International School and Conference on Network Science',
+  name: 'NetSci Dresden 2027 — International School and Conference on Network Science',
   description,
-  startDate: '2026-06-15',
-  endDate: '2026-06-19',
+  startDate: '2027-05-17',
+  endDate: '2027-05-21',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   eventStatus: 'https://schema.org/EventScheduled',
   url: siteOrigin,

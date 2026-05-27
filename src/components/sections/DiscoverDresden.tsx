@@ -17,30 +17,26 @@ export default function DiscoverDresden({ image }: Props) {
     <section id="venue" className="px-4 lg:px-8 py-16">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center">
-          {/* Video placeholder card */}
-          <div className="relative rounded-2xl overflow-hidden shadow-soft aspect-video bg-tu-deep group cursor-pointer" data-reveal>
-            <img
-              src={image.src}
-              srcSet={image.srcSet}
-              sizes="(min-width: 1024px) 55vw, 100vw"
-              alt="Dresden — Florence on the Elbe"
-              className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-tu-deep/80 via-tu-deep/30 to-transparent" />
+          {/* Hyperlapse video — Dresden silhouette by twosyde media GmbH */}
+          <div className="relative rounded-2xl overflow-hidden shadow-soft aspect-video bg-tu-deep group" data-reveal>
+            <video
+              className="absolute inset-0 h-full w-full object-cover object-center"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              poster={image.src}
+            >
+              <source src="/dresden-hyperlapse.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-tu-deep/70 via-transparent to-transparent pointer-events-none" />
 
-            {/* Play button */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-20 h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-soft group-hover:scale-110 group-hover:bg-tu-gold transition-all duration-300">
-                <svg className="w-8 h-8 text-tu-deep ml-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+            {/* Caption + credit */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 pointer-events-none">
+              <div className="text-xs uppercase tracking-[0.2em] text-tu-gold font-semibold">
+                Video · twosyde media GmbH
               </div>
-            </div>
-
-            {/* Caption */}
-            <div className="absolute bottom-0 left-0 right-0 p-6">
-              <div className="text-xs uppercase tracking-[0.2em] text-tu-gold font-semibold">02:14</div>
               <div className="text-white font-display text-xl mt-1">{t('discover.caption')}</div>
             </div>
           </div>

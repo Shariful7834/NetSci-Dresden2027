@@ -1,7 +1,7 @@
 ---
 title: Machine Learning on Graphs
 organizers: ['Tina Eliassi-Rad', 'Stephan Günnemann']
-date: '16 June 2026'
+date: '18 May 2027'
 room: 'HSZ / 0301'
 topic: 'Graph neural networks, representation learning, and trustworthy graph ML.'
 order: 3

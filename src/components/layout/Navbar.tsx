@@ -36,20 +36,9 @@ export default function Navbar() {
     <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
       <nav className="max-w-7xl mx-auto px-4 lg:px-8 h-16 flex items-center justify-between gap-6" aria-label="Main">
         {/* Logo */}
-        <a href={href('/')} className="flex items-center gap-2.5 shrink-0 group" aria-label={t('nav.home')}>
-          <div className="relative w-8 h-8 rounded-full bg-tu-navy flex items-center justify-center overflow-hidden">
-            <svg viewBox="0 0 44 44" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="22" cy="10" r="3" fill="#C9A24B" />
-              <circle cx="10" cy="28" r="3" fill="#fff" />
-              <circle cx="34" cy="28" r="3" fill="#fff" />
-              <circle cx="22" cy="36" r="2" fill="#fff" />
-              <path d="M22 10 L10 28 M22 10 L34 28 M10 28 L22 36 M34 28 L22 36 M10 28 L34 28" stroke="#fff" strokeWidth="1.2" strokeOpacity="0.7" />
-            </svg>
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="font-display text-base font-black text-tu-deep tracking-tight">NetSci</span>
-            <span className="text-[9px] tracking-[0.18em] uppercase text-tu-blue font-medium mt-0.5">Dresden ★</span>
-          </div>
+        <a href={href('/')} className="flex items-center gap-2 shrink-0" aria-label={t('nav.home')}>
+          <img src="/netsci-logo.svg" alt="NetSci" className="h-9 w-auto" />
+          <span className="text-[10px] tracking-[0.18em] uppercase text-tu-blue font-semibold hidden sm:inline">Dresden ★</span>
         </a>
 
         {/* Desktop menu */}

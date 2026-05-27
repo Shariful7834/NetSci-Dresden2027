@@ -1,7 +1,7 @@
 ---
 title: Higher-Order Networks
 organizers: ['Renaud Lambiotte', 'Federico Battiston']
-date: '15 June 2026'
+date: '17 May 2027'
 room: 'HSZ / 0401'
 topic: 'Hypergraphs, simplicial complexes, and group interactions beyond pairwise edges.'
 order: 1

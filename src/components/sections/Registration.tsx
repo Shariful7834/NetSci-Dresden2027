@@ -1,9 +1,9 @@
 import { cn } from '../../lib/cn';
 
 // Fee tiers mirror the NetSci conference-series structure, localized to
-// Dresden 2026. Early-bird deadline matches src/data/conference.ts (6 Mar 2026).
-const earlyDeadline = '6 March 2026';
-const onlineDeadline = '5 June 2026';
+// Dresden 2027 (conference dates: 17 — 21 May 2027).
+const earlyDeadline = '5 February 2027';
+const onlineDeadline = '6 May 2027';
 
 interface Fee {
   category: string;
@@ -36,9 +36,9 @@ const steps = [
 ];
 
 const cancellation = [
-  { when: 'On or before 20 March 2026', terms: 'Full refund, minus a €25 administration fee.' },
-  { when: '21 March – 30 April 2026', terms: '50% refund, minus a €25 administration fee.' },
-  { when: 'From 1 May 2026', terms: 'No refund. The same applies to no-shows.' },
+  { when: 'On or before 20 February 2027', terms: 'Full refund, minus a €25 administration fee.' },
+  { when: '21 February – 31 March 2027', terms: '50% refund, minus a €25 administration fee.' },
+  { when: 'From 1 April 2027', terms: 'No refund. The same applies to no-shows.' },
 ];
 
 export const registrationLede = `Early-bird rates apply until ${earlyDeadline}. Online registration closes ${onlineDeadline}; on-site registration opens afterwards.`;
@@ -53,7 +53,7 @@ export default function Registration() {
           <p className="mt-1 font-display text-2xl font-bold">Register by {earlyDeadline} for the best rate</p>
         </div>
         <a
-          href="mailto:register@netsci-dresden.de?subject=NetSci%20Dresden%202026%20Registration"
+          href="mailto:register@netsci-dresden.de?subject=NetSci%20Dresden%202027%20Registration"
           className="shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-tu-sky text-white font-semibold hover:bg-tu-blue active:scale-95 transition-all"
         >
           Register now

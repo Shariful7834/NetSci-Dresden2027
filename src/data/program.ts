@@ -18,7 +18,7 @@ export interface ScheduleDay {
 export const schedule: ScheduleDay[] = [
   {
     day: 'Monday',
-    date: '15 June 2026',
+    date: '17 May 2027',
     slots: [
       { time: '09:00', title: 'Satellite symposia (full day)', kind: 'satellite', room: 'HSZ' },
       { time: '18:00', title: 'Welcome reception', kind: 'social', room: 'Zwinger' },
@@ -26,7 +26,7 @@ export const schedule: ScheduleDay[] = [
   },
   {
     day: 'Tuesday',
-    date: '16 June 2026',
+    date: '18 May 2027',
     slots: [
       { time: '09:00', title: 'Opening & keynote — Alessandro Vespignani', kind: 'keynote', room: 'Audimax' },
       { time: '10:30', title: 'Coffee break', kind: 'break' },
@@ -37,7 +37,7 @@ export const schedule: ScheduleDay[] = [
   },
   {
     day: 'Wednesday',
-    date: '17 June 2026',
+    date: '19 May 2027',
     slots: [
       { time: '09:00', title: 'Keynote — Tiago P. Peixoto', kind: 'keynote', room: 'Audimax' },
       { time: '11:00', title: 'Contributed sessions II', kind: 'session', room: 'HSZ' },
@@ -46,7 +46,7 @@ export const schedule: ScheduleDay[] = [
   },
   {
     day: 'Thursday',
-    date: '18 June 2026',
+    date: '20 May 2027',
     slots: [
       { time: '09:00', title: 'Keynote — Renaud Lambiotte', kind: 'keynote', room: 'Audimax' },
       { time: '11:00', title: 'Contributed sessions III', kind: 'session', room: 'HSZ' },
@@ -56,7 +56,7 @@ export const schedule: ScheduleDay[] = [
   },
   {
     day: 'Friday',
-    date: '19 June 2026',
+    date: '21 May 2027',
     slots: [
       { time: '09:00', title: 'Keynote — Yamir Moreno', kind: 'keynote', room: 'Audimax' },
       { time: '11:00', title: 'Awards & closing', kind: 'session', room: 'Audimax' },
