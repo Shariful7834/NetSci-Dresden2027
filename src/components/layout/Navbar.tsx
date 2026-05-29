@@ -38,7 +38,6 @@ export default function Navbar() {
         {/* Logo */}
         <a href={href('/')} className="flex items-center gap-2 shrink-0" aria-label={t('nav.home')}>
           <img src="/netsci-logo.svg" alt="NetSci" className="h-9 w-auto" />
-          <span className="text-[10px] tracking-[0.18em] uppercase text-tu-blue font-semibold hidden sm:inline">Dresden ★</span>
         </a>
 
         {/* Desktop menu */}
