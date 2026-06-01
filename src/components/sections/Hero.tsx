@@ -13,8 +13,6 @@ interface Props {
 }
 
 export default function Hero({ image }: Props) {
-  // Registration is the one live action on the landing page.
-  const ctaHref = '/registration';
 
   return (
     <section className="relative w-full overflow-hidden">
@@ -64,13 +62,14 @@ export default function Hero({ image }: Props) {
               {t('hero.dates')}
             </p>
 
-            <a
-              href={ctaHref}
-              className="mt-8 inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-tu-sky text-white font-semibold text-lg shadow-soft hover:bg-tu-blue active:scale-95 transition-all duration-200"
+            {/* Non-clickable status pill — registration not yet open. */}
+            <div
+              className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 text-white font-medium text-sm uppercase tracking-[0.15em]"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
+              <span className="w-2 h-2 rounded-full bg-tu-gold motion-safe:animate-pulse" />
               {t('hero.cta')}
-            </a>
+            </div>
           </div>
         </div>
       </div>

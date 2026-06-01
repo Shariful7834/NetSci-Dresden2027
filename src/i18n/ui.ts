@@ -30,7 +30,7 @@ export const ui = {
     // Use `|` to mark line breaks (the Hero renders one <br/> per pipe).
     'hero.title': 'International School and|Conference on Network|Science',
     'hero.dates': 'May 17 — 21, 2027, Dresden, Germany',
-    'hero.cta': 'Registration open',
+    'hero.cta': 'Registration opens soon',
 
     'about.label': 'Welcome to NetSci Dresden',
     'about.heading': 'NetSci 2027 —',

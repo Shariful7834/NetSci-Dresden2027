@@ -6,3 +6,7 @@
 //  Set this to `false` after the kickoff meeting to switch on the full nav.
 // ─────────────────────────────────────────────
 export const landingOnly = true;
+
+// When false, the top navbar menu (and mobile hamburger) is hidden — only the
+// NetSci logo shows. Use this while content for the deeper pages is not ready.
+export const showMenu = false;

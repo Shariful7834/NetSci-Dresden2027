@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { navItems } from '../../data/navigation';
 import { useTranslations } from '../../i18n/utils';
-import { landingOnly } from '../../data/site';
+import { landingOnly, showMenu } from '../../data/site';
 
 const t = useTranslations();
 
@@ -41,6 +41,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop menu */}
+        {showMenu && (
         <ul className="hidden lg:flex items-center gap-0 text-[15px] font-normal text-tu-ink">
           {navItems.map((item) => (
             <li key={item.key} className="nav-item relative">
@@ -81,8 +82,10 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+        )}
 
         {/* Mobile hamburger */}
+        {showMenu && (
         <button
           className="lg:hidden p-2 rounded-md hover:bg-tu-ice"
           aria-label={t('nav.menu.open')}
@@ -94,10 +97,11 @@ export default function Navbar() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
+        )}
       </nav>
 
       {/* Mobile drawer */}
-      {mobileOpen && (
+      {showMenu && mobileOpen && (
         <div id="mobileMenu" className="lg:hidden border-t border-tu-navy/10 bg-white">
           <ul className="px-4 py-4 space-y-1">
             {navItems.map((item) => (
