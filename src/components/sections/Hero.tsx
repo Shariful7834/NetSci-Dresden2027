@@ -19,19 +19,28 @@ export default function Hero({ image }: Props) {
   return (
     <section className="relative w-full overflow-hidden">
       <div className="relative h-screen w-full">
-        {/* Background image (optimized AVIF, eager — this is the LCP element) */}
-        <img
-          src={image.src}
-          srcSet={image.srcSet}
-          sizes="100vw"
-          alt="TU Dresden campus"
+        {/* Background hyperlapse video (Dresden silhouette by twosyde media GmbH).
+            The optimized image is the poster (shown while the video buffers and on
+            devices that cannot play the source). */}
+        <video
           className="absolute inset-0 h-full w-full object-cover object-center"
-          loading="eager"
-          fetchPriority="high"
-        />
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster={image.src}
+        >
+          <source src="/dresden-hyperlapse.mp4" type="video/mp4" />
+        </video>
 
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/50" />
+
+        {/* Video credit */}
+        <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.2em] text-white/60 z-10">
+          Video · twosyde media GmbH
+        </div>
 
         {/* Content */}
         <div className="relative h-full flex flex-col items-center justify-center px-6 text-center pt-16">
