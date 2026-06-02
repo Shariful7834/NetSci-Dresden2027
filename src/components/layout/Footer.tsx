@@ -8,11 +8,16 @@ const t = useTranslations();
 const livePaths = new Set(['/registration']);
 const L = (path: string) => (landingOnly && !livePaths.has(path) ? '#' : path);
 
-export default function Footer() {
+interface Props {
+  /** Minimal mode: show only the TU Dresden + SynoSys logo strip. */
+  minimal?: boolean;
+}
+
+export default function Footer({ minimal = false }: Props) {
   return (
     <footer className="bg-tu-deep text-white">
-      {/* Partners strip */}
-      <div className="border-b border-white/10">
+      {/* Partners strip — TU Dresden + SynoSys logos */}
+      <div className={minimal ? '' : 'border-b border-white/10'}>
         <div className="max-w-6xl mx-auto px-4 lg:px-8 py-10">
           <div className="text-xs uppercase tracking-[0.25em] text-tu-gold font-semibold text-center mb-6">
             {t('footer.partners')}
@@ -32,6 +37,10 @@ export default function Footer() {
         </div>
       </div>
 
+      {minimal && null}
+
+      {!minimal && (
+      <>
       {/* Main footer grid */}
       <div className="max-w-6xl mx-auto px-4 lg:px-8 py-12 grid md:grid-cols-[2fr_1fr_1fr_1fr] gap-8">
         {/* Brand block */}
@@ -107,6 +116,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      </>
+      )}
     </footer>
   );
 }
